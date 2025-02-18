@@ -1,24 +1,12 @@
-import {
-  SignedIn,
-  SignedOut,
-  SignIn,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-  SignOutButton,
-} from "@clerk/nextjs";
+import Link from "next/link";
 import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <SignedIn>
-        <SignOutButton />
-        <UserButton />
-      </SignedIn>
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
+    <div className="flex justify-center items-center h-screen">
+      <button className="border border-zinc-50 w-fit px-4 py-2">
+        <Link href={"dashboard"}>GO TO APP</Link>
+      </button>
     </div>
   );
 };
